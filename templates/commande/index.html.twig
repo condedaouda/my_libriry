@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block content %}
+{% if notification %}
+    <br><br>
+    <div class="alert alert-secondary" role="alert">
+        {{notification}} <br><br>
+        <a href="{{path('products')}}" class="btn btn-success btn-block">Les documents</a>
+        <br><br>
+    </div><br><br><br>
+{% else %}
+    <div class="row">
+        <div class="col-md-2 text-center commande-img">
+            <h4>{{product.name}}</h4>
+            <img src="/upload/{{product.illustration}}" alt="{{product.illustration}}" class="img-fluid img-product">
+        </div>
+        <div class="col-md-10 my-auto">
+            <!-- <h3>Commande</h3> -->
+            <p class="code-price-content">Code : <span class="code-price">{{product.id}}</span></p>
+            <p class="code-price-content">Prix : <span class="code-price">{{product.price | number_format()}} GNF</span></p>
+            <p class="alert alert-secondary">Le document vous sera livré dans votre école, après avoir réçu votre document vous pouvez payer.</p>
+            {{form(form)}}
+        </div>
+    </div>
+{% endif %}
+
+    
+{% endblock %}

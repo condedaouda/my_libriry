@@ -1,0 +1,7 @@
+<div class="product-item">
+    <a href="{{path('product', {'slug' : product.slug})}}"><img src="/upload/{{product.illustration}}" alt="{{product.illustration}}" class="img-fluid img-product"></a>
+    <h6 class="product-name">{{product.name}}</h6>
+    <span class="product-subtitle">{{product.subtitle}}</span>
+    <hr>
+    {# <span class="product-price">{{product.price | number_format()}} GNF</span>  #}
+</div>

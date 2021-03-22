@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+    <h3>Contact</h3>
+    <p>
+        Vous pouvez directement nous contacter pour la commande de vos documents ou obtenir plus d'informations.
+    </p>
+    <hr>
+    <div class="contact-content">
+        {% for contact in contacts %}
+           <a href="">
+               {% if contact.valeur == "numero" %}
+               <p><a href="#" class="contact-value"><i class="fas fa-phone-volume"></i> {{contact.number}}</a></p>
+               {% else %}
+               <p><a href="#" class="contact-value"><i class="fas fa-envelope-open"></i> {{contact.number}}</a></p>
+               {% endif %}
+            </a>
+        {% endfor %}
+    </div><br><br>
+{% endblock %}

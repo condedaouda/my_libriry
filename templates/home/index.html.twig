@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+<h3 class="text-center">Nos meilleurs documents</h3>
+<p class="text-center">Découvrez les documents les plus demandés.</p>
+<div class="row justify-content-md-center">
+    {% for product in products %}
+        <div class="col-md-2 text-center">
+            {% include "product/single_product.html.twig" %}
+        </div>
+    {% endfor %}
+</div>
+
+<!-- START THE FEATURETTES -->
+<div class="row featurette">
+    <div class="col-md-7">
+        <h3 class="featurette-heading">Une heure de lecture est le souverain remède contre les dégoûts de la vie.</h3>
+        <p class="lead">
+            À la base, la lecture est synonyme de relaxation. 
+            Mais au-delà de cette qualité reconnue, la thématique d'un livre peut aussi 
+            nous apporter la tranquillité d'esprit et une paix intérieure 
+            considérable.
+        </p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{asset('images/first.jpg')}}" class="img-fluid" alt="Un meilleur des livres">
+    </div>
+</div>
+<hr>
+
+
+<div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h3 class="featurette-heading">Une lecture amusante est aussi utile à la santé que l’exercice du corps.</h3>
+        <p class="lead">
+            Comme tous les autres muscles du corps, 
+            le cerveau a besoin d'entraînement pour rester 
+            vigoureux et en bonne santé. La règle « on s'en sert ou on le perd » 
+            s'applique parfaitement en ce qui concerne notre cerveau.
+        </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img src="{{asset('images/second.jpg')}}" class="img-fluid" alt="Un meilleur des livres">
+    </div>
+</div><br><br>
+{% endblock %}

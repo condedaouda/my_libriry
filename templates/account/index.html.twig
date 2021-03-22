@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - Bibliothèque Guinéenne{% endblock %}
+
+{% block content %}
+<h1>Mon compte</h1>
+Bienvenue {{app.user.nom}} dans votre compte.
+<hr>
+
+{% if is_granted("ROLE_ADMIN") %}
+    <a href="/admin">Vous êtes un administrateur, acceder au backoffiche ?</a><br>
+{% endif %}
+
+<a href="{{path('account_password')}}">Modifier mon mot de passe</a><br>
+
+<br><br><br><br><br><br><br><br>
+{% endblock %}
