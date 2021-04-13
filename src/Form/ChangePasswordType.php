@@ -19,40 +19,40 @@ class ChangePasswordType extends AbstractType
         $builder
             ->add('email', EmailType::class, [
                 'disabled' => true,
-                'label' => 'Mon adress email',
+                'label' => 'My email address',
             ])
             ->add('nom', TextType::class, [
                 'disabled' => true,
-                'label' => 'Mon nom',
+                'label' => 'My first name',
             ])
             ->add('prenom', TextType::class, [
                 'disabled' => true,
-                'label' => 'Mon prénom',
+                'label' => 'My last name',
             ])
             ->add('old_password', PasswordType::class, [
-                'label' => 'Mon mot de passe actuel',
+                'label' => 'My current password',
                 'mapped' => false,
                 'attr' => [
-                    'placeholder' => "Veuillez saisir votre mot de passe actuel"
+                    'placeholder' => "Please enter your current password"
                 ]
             ])
 
             ->add('new_password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'mapped' => false,
-                'label' => 'Mon mot de passe',
-                'invalid_message' => "Le mot de passe et la confirmation doivent être identique",
-                'first_options' => ['label' => 'Mon nouveau mot de passe','attr' =>[
-                    'placeholder' => 'Merci de saisir votre mot de passe',
+                'label' => 'my password',
+                'invalid_message' => "Password and confirmation must be the same",
+                'first_options' => ['label' => 'My new password','attr' =>[
+                    'placeholder' => 'Please enter your password',
                 ],],
                 
-                'second_options' => ['label' => 'Confirmez votre mot de passe','attr' =>[
-                    'placeholder' => 'Merci de confirmer votre mot de passe',
+                'second_options' => ['label' => 'Confirm your password','attr' =>[
+                    'placeholder' => 'Please confirm your password',
                 ],]
             ])
 
             ->add('submit', SubmitType::class, [
-                'label' => "Mettre à jour"
+                'label' => "Update"
             ])
         ;
     }

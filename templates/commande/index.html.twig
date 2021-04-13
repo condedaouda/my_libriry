@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Commande{% endblock %}
+{% block title %}Ordered{% endblock %}
 
 {% block content %}
 {% if notification %}
     <br><br>
     <div class="alert alert-secondary" role="alert">
         {{notification}} <br><br>
-        <a href="{{path('products')}}" class="btn btn-success btn-block">Les documents</a>
+        <a href="{{path('products')}}" class="btn btn-success btn-block">The documents</a>
         <br><br>
     </div><br><br><br>
 {% else %}
@@ -19,8 +19,8 @@
         <div class="col-md-10 my-auto">
             <!-- <h3>Commande</h3> -->
             <p class="code-price-content">Code : <span class="code-price">{{product.id}}</span></p>
-            <p class="code-price-content">Prix : <span class="code-price">{{product.price | number_format()}} GNF</span></p>
-            <p class="alert alert-secondary">Le document vous sera livré dans votre école, après avoir réçu votre document vous pouvez payer.</p>
+            <p class="code-price-content">Price : <span class="code-price">{{product.price | number_format()}} $</span></p>
+            <p class="alert alert-secondary">The document will be delivered to your school, after receiving your document you can pay.</p>
             {{form(form)}}
         </div>
     </div>

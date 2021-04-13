@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}La Bibliothèque Guinéenne{% endblock %}
+{% block title %}Library{% endblock %}
 
 {% block content %}
 <form method="post">
@@ -14,9 +14,9 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Merci de vous connecter</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
     <label for="inputEmail">Votre Email</label>
-    <input type="email" placeholder="Votre Email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+    <input type="email" placeholder="Your email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
     <label for="inputPassword">Votre mot de passe</label>
     <input type="password" name="password" placeholder="Votre mot de passe" id="inputPassword" class="form-control" required>
 
@@ -37,7 +37,7 @@
 
     <hr>
     <button class="btn btn-lg btn-primary btn-sm" type="submit">
-        Se connecter
+        login
     </button>
 </form>
 {% endblock %}

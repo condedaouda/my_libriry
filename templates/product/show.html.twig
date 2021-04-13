@@ -10,21 +10,21 @@
         <div class="col-md-10 my-auto show-content">
             <h4 class="text-center">{{product.name}}</h4>
             <p class="">{{product.subtitle}}</p>
-            <p class="page-padding">Matière : <span class="m-c-p">{{product.matiere}}</span></p>
+            <p class="page-padding">Material : <span class="m-c-p">{{product.matiere}}</span></p>
             <p class="page-padding">Document : <span class="m-c-p">{{product.category}}</span></p>
-            <p class="page-padding">Classe : <span class="m-c-p">{{product.classe}}</span></p>
-            <p class="product-page-price">Prix : <span class="m-c-p">{{product.price | number_format()}} GNF</span></p>
+            <p class="page-padding">Class : <span class="m-c-p">{{product.classe}}</span></p>
+            <p class="product-page-price">Price : <span class="m-c-p">{{product.price | number_format()}} $</span></p>
             <hr>
             <p>
                 {{product.description}}
             </p>
-            <a href="{{path('commande', {'slug' : product.slug})}}" class="btn btn-info btn-block" >Commander</a><br>
+            <a href="{{path('commande', {'slug' : product.slug})}}" class="btn btn-info btn-block" >Order</a><br>
         </div>
     </div>
 
     <hr>
-    <h4>Nos meilleurs documents</h4>
-    <p>Découvrez les documents les plus demandés.</p>
+    <h4>Our best documents</h4>
+    <p>Discover the most requested documents.</p>
     <div class="row justify-content-md-center">
         {% for product in products %}
             <div class="col-md-2 text-center">

@@ -17,58 +17,58 @@ class CommandeType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Votre nom et prénom',
+                'label' => 'Your first and last name',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre nom et prénom"
+                    'placeholder' => "Please enter your first and last name"
                 ]
             ])
             ->add('numero', NumberType::class, [
-                'label' => 'Votre numéro',
+                'label' => 'Your number',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre numéro de téléphone"
+                    'placeholder' => "Please enter your phone number"
                 ]
             ])
             ->add('ecole', TextType::class, [
-                'label' => 'Le nom de votre école',
+                'label' => 'The name of your school',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir le nom de votre école"
+                    'placeholder' => "Please enter the name of your school"
                 ]
             ])
 
             ->add('adress', TextType::class, [
-                'label' => 'Votre address',
+                'label' => 'Your address',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre adress"
+                    'placeholder' => "Please enter your address"
                 ]
             ])
             ->add('quantity', NumberType::class, [
-                'label' => 'Quantité',
+                'label' => 'quantity',
                 'constraints' => new Length([
                     'min' =>1,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir la quantité du document"
+                    'placeholder' => "Please enter the quantity of the document"
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Enregistrer la commande',
+                'label' => 'Save the order',
                 'attr' => [
                     'class' => 'btn btn-block btn-info'
                 ]

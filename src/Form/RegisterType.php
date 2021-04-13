@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Validator\Constraints\Length;
 
 class RegisterType extends AbstractType
 {
@@ -18,49 +19,49 @@ class RegisterType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
-                'label' => 'Votre nom',
+                'label' => 'Your first name',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre nom"
+                    'placeholder' => "Please enter Your first name"
                 ]
             ])
             ->add('prenom', TextType::class, [
-                'label' => 'Votre prénom',
+                'label' => 'Your last name',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre prénom"
+                    'placeholder' => "Please enter Your first name"
                 ]
             ])
             ->add('email', EmailType::class, [
-                'label' => 'Votre email',
+                'label' => 'Your email',
                 'constraints' => new Length([
                     'min' =>2,
                     'max' => 30
                 ]),
                 'attr' => [
-                    'placeholder' => "Merci de saisir votre adresse email"
+                    'placeholder' => "Please enter your email address"
                 ]
             ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'label' => 'Votre mot de passe',
-                'invalid_message' => "Le mot de passe et la confirmation doivent être identique",
-                'first_options' => ['label' => 'Mot de passe','attr' =>[
-                    'placeholder' => 'Merci de saisir votre mot de passe',
+                'label' => 'Your password',
+                'invalid_message' => "Password and confirmation must be the same",
+                'first_options' => ['label' => 'Password','attr' =>[
+                    'placeholder' => 'Please enter your password',
                 ],],
                 
-                'second_options' => ['label' => 'Confirmez votre mot de passe','attr' =>[
-                    'placeholder' => 'Merci de confirmer votre mot de passe',
+                'second_options' => ['label' => 'Confirm your password','attr' =>[
+                    'placeholder' => 'Please confirm your password',
                 ],]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => "S'inscrire"
+                'label' => "Register"
             ])
         ;
     }

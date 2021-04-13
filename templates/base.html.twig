@@ -35,7 +35,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{path('home')}}">BIBLIOTHEQUE GUINEENNE</a>
+        <a class="navbar-brand" href="{{path('home')}}">LIBRARY</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,9 +55,9 @@
 
             <div class="navbar-item-custom">
                 {% if app.user %} 
-                    <a href="{{path('account')}}">Mon compte <small>({{app.user.nom}})</small> </a> | <a href="{{path('app_logout')}}">Déconnexion</a>
+                    <a href="{{path('account')}}">My account <small>({{app.user.nom}})</small> </a> | <a href="{{path('app_logout')}}">Logout</a>
                 {% else %}
-                    <a href="{{path('app_login')}}">Connexion</a> | <a href="{{path('register')}}">Inscription</a>
+                    <a href="{{path('app_login')}}">Login</a> | <a href="{{path('register')}}">Registration</a>
                 {% endif %}
             </div>
             
@@ -118,8 +118,8 @@
     <br><br><br>
     <footer class="footer-custom">
         <p>
-            &copy; 2021-2023 la Bibliothèque Guinéenne <br>
-            <small>La Bibliothèque 100% disponible pour vos commandes</small>
+            &copy; 2021-2023 the library <br>
+            <small>The Library 100% available for your orders</small>
         </p>
     </footer>
 </main>
